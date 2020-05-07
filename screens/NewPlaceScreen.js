@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TextInput, ScrollView, Button} from 'react-nati
 import { useDispatch } from 'react-redux';
 
 import Colors from '../constants/Colors';
+import ImagePicker from '../components/ImagePicker';
 import * as placesActions from '../store/places/actions';
 
 const NewPlaceScreen = props => {
@@ -29,6 +30,7 @@ const NewPlaceScreen = props => {
           onChangeText={titleChangedHandler}
           value={titleValue}
         />
+        <ImagePicker/>
         <Button 
           title='Save Place' 
           color={Colors.primary}
